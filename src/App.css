@@ -1,0 +1,85 @@
+.App {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #3e5349;
+}
+.nav {
+  background-color: #3491ba;
+  color: #fff;
+  min-height: 90px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.page-footer {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 60px;
+  border-top: 1px solid rgba(0, 136, 254, 0.5);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+}
+.main-content {
+  min-height: 92vh;
+  padding-top: 90px;
+}
+.card-detail-content {
+  min-height: 60vh;
+}
+.card-btn {
+  background-color: #0088fe;
+  border-color: #0088fe;
+  outline: #0088fe;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  width: 100%;
+}
+.card {
+  width: 200px;
+  min-height: 250px;
+  -webkit-box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.17);
+  border-radius: 15px;
+}
+
+.card-details {
+  min-height: 65vh;
+}
+.more-details-link {
+  min-height: 65vh;
+}
+
+.detail-page-nav {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-content {
+  padding: 20px;
+  width: 90%;
+  color: #3e5349;
+  border-radius: 15px;
+  background-color: #baead4;
+}
+
+textarea {
+  min-height: 550px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+}
