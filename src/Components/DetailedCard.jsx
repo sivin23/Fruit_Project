@@ -24,8 +24,6 @@ function DetailedCard({cardInfoData}) {
   const selectedNutrientsFun = useContext(selectedCardNutrientsFunctionContext);
   selectedNutrientsFun(cardInfoData.fruitNutrient);
 
-  // benefit state List for new list items of benefit
-  const [newBenefitList, setNewBenefitList] = useState([])
   // States to manage button options
   const [addBenefitOptions, setAddBenefitOptions] = useState(false);
   const [deleteBenefitOptions, setDeleteBenefitOptions] = useState(false)
@@ -85,7 +83,7 @@ function DetailedCard({cardInfoData}) {
         </div>
         <div className="col-md-4 px-5 h-100 d-flex flex-column justify-content-between border-start border-secondary-subtle more-details-link">
           {/* benefit Component witth options */}
-          <Benefits selectedBenefits = {selectedBenefits} newBenefitList = {newBenefitList} setNewBenefitList={setNewBenefitList} addBenefitOptions = {addBenefitOptions} deleteBenefitOptions = {deleteBenefitOptions} />
+          <Benefits selectedBenefits = {selectedBenefits} addBenefitOptions = {addBenefitOptions} deleteBenefitOptions = {deleteBenefitOptions} />
         </div>
         <div className='d-flex flex-row align-items-end justify-content-end save-cancel-btn-container'>
           {/* Save Change and Update buttons component */}

@@ -52,10 +52,10 @@ function MainContent() {
         (
           <div className="container-fluid">
             <p className='px-5 mb-0  mt-3 fw-bolder fs-5'>Select a fruit to know details</p>
-            <div className='row pt-3 d-flex justify-content-center px-5'>
+            <div className='row pt-3 col-sm-12 d-flex justify-content-center px-1'>
               {
                 apiData.length > 0 && apiData.map(cards => (
-                  <div className='d-flex col col-md-2 align-contents-md-center justify-content-lg-start justify-content-sm-center p-0 mx-2 my-3'>
+                  <div className='d-flex col col-md-2 justify-content-center p-0 mx-3 my-3'>
                     <Card fruitName = {cards.fruitName} id = {cards.id} url = {cards.fruitImageUrl} nutrientInfo = {cards.fruitNutrient} />
                   </div>
                 ))
