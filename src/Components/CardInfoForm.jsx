@@ -2,7 +2,7 @@ import React from 'react'
 
 function CardInfoForm({nutrientInfo}) {
   return (
-    <div className='info-content m-0' key={nutrientInfo.id}>
+    <div className='info-content flex-md-column justify-content-md-center m-0' key={nutrientInfo.id}>
       <div className="row">
         <div className="col px-4">
           <h4 className="h4 fw-bolder fs-4">Nutrients</h4>

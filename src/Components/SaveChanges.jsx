@@ -15,7 +15,7 @@ function SaveChanges({setDiscriptionEditable, setEditInfoBtn, setCardNutrientInf
         setCardNutrientInfo(true);
     }
   return (
-    <div className='d-flex align-items-end px-5'>
+    <div className='d-flex align-items-end my-3'>
         <div className='d-flex justify-content-center'>
             <button className='btn btn-primary fw-bold fs-4 px-5 mx-2' onClick={CancelChanges}>Cancel</button>
             <button className='btn btn-primary fw-bold fs-4 px-5 mx-2'>Update</button>

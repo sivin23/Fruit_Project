@@ -4,7 +4,7 @@ function CardEditForm({nutrientInfo}) {
   return (
     <div className='info-content m-0' key={nutrientInfo.id}>
       <div className="row">
-        <div className="col px-4">
+        <div className="col">
           <h4 className="h4 fw-bolder fs-4">Nutrients</h4>
           <div className='d-flex flex-row align-items-center justify-content-between mt-1'>
             <p className="lead col m-0 p-0">Carbohydrate</p> 

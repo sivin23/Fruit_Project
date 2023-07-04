@@ -37,6 +37,10 @@ function DetailedCard({cardInfoData}) {
   // Pagination tracking
   const [editPageInfo, setEditPageInfo] = useState(true);
 
+  // Adding new benifits
+  const [newBenefitList, setNewBenefitList] = useState([]);
+  const [counter, setCounter] = useState(1)
+
   // On click Edit info button show other options
   function ClickShowEditOptions ()
   {
@@ -51,21 +55,21 @@ function DetailedCard({cardInfoData}) {
   }
   return (
     <div className='container-fluid card-detail-content'>
-      <div className='detail-page-nav px-5'>
+      <div className='detail-page-nav flex-column justify-content-center flex-md-column justify-content-md-center flex-lg-row justify-content-lg-between mt-2 px-5'>
         {/* Pagination */}
         <Pagination name = {cardInfoData.fruitName} editTag = {editPageInfo}/>
         {/* Edit Info button */}
-        {editInfoBtn && (<button className='btn btn-primary fw-bold fs-4 px-5' onClick={ClickShowEditOptions}>Edit Info</button>)}
+        {editInfoBtn && (<button className='btn btn-primary fw-bold fs-4 px-5 mt-2' onClick={ClickShowEditOptions}>Edit Info</button>)}
       </div>
       <div className='row px-0 mt-3'>
         <div className="col-md-8 px-5">
           <div className="row">
-            <div className="col-md-5 d-flex flex-column justify-content-start">
+            <div className=" col-12 col-md-4 col-lg-5 d-flex flex-column justify-content-lg-center justify-content-md-center justify-content-start">
               {/* Fruit image */}
-              <img src={cardInfoData.fruitImageUrl} width="300px" alt="Fruit Img" />
+              <img src={cardInfoData.fruitImageUrl} width="100%" alt="Fruit Img" />
               {editCardNutrientInfo && (<span className='lead text-danger d-flex justify-content-end'>Upload Photo</span>)}
             </div>
-            <div className="col-md-7 d-flex justify-content-end">
+            <div className=" col-12 col-md-8 col-lg-7 d-flex align-items-center flex-md-column justify-content-center justify-content-lg-end justify-content-md-center">
               {/* Fruit Nutrient cards with editable component */}
             {editCardNutrientInfo && ( <CardEditForm nutrientInfo={selectedNutrients}/>)}
             {cardNutrientInfo && (<CardInfoForm nutrientInfo={selectedNutrients} />)}
@@ -83,9 +87,9 @@ function DetailedCard({cardInfoData}) {
         </div>
         <div className="col-md-4 px-5 h-100 d-flex flex-column justify-content-between border-start border-secondary-subtle more-details-link">
           {/* benefit Component witth options */}
-          <Benefits selectedBenefits = {selectedBenefits} addBenefitOptions = {addBenefitOptions} deleteBenefitOptions = {deleteBenefitOptions} />
+          <Benefits setCounter={setCounter} counter={counter} setNewBenefitList={setNewBenefitList} newBenefitList={newBenefitList} selectedBenefits = {selectedBenefits} addBenefitOptions = {addBenefitOptions} deleteBenefitOptions = {deleteBenefitOptions} />
         </div>
-        <div className='d-flex flex-row align-items-end justify-content-end save-cancel-btn-container'>
+        <div className='d-flex flex-row align-items-end justify-content-center justify-content-lg-end justify-content-md-center save-cancel-btn-container'>
           {/* Save Change and Update buttons component */}
           {saveChangesOptions && <SaveChanges setDiscriptionEditable={setDiscriptionEditable} setCardNutrientInfo={setCardNutrientInfo} setEditCardNutrientInfo={setEditCardNutrientInfo} setEditInfoBtn={setEditInfoBtn} setsaveChangesOptions={setsaveChangesOptions} setDeleteBenefitOptions = {setDeleteBenefitOptions} setAddBenefitOptions = {setAddBenefitOptions} />}
         </div>
