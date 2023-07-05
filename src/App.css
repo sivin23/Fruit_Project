@@ -43,8 +43,8 @@
   border-top-right-radius: 0;
   width: 100%;
 }
+
 .card {
-  width: 200px;
   min-height: 250px;
   -webkit-box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: 0px -2px 5px 1px rgba(0, 0, 0, 0.17);
@@ -53,7 +53,7 @@
 }
 
 .card-details {
-  min-height: 65vh;
+  min-height: 60vh;
 }
 .more-details-link {
   min-height: 65vh;
@@ -80,5 +80,5 @@ textarea {
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
 }

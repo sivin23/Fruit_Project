@@ -79,7 +79,7 @@ function DetailedCard({cardInfoData}) {
             <div className="col">
               {/* Fruit discription */}
               { discriptionEditable ? 
-              (<textarea className='form-control lead fs-4' style={{resize: 'none'}} rows="5" name="Discription" id="discription" contenteditable="false" >{cardInfoData.fruitDiscription}</textarea>)
+              (<textarea className='form-control lead fs-4' style={{resize: 'none'}} rows="3" name="Discription" id="discription" contenteditable="false" >{cardInfoData.fruitDiscription}</textarea>)
               :
               (<p className='fs-4 mt-5 '>{cardInfoData.fruitDiscription}</p>)}
             </div>

@@ -38,9 +38,9 @@ function Card({fruitName, id, url, nutrientInfo}) {
     }
 
   return (
-    <div className="card pt-3">
+    <div className="card w-100 col-sm-6 col-md-10 pt-3 justify-content-md-center">
       <h5 className="h5 px-3 text-uppercase fw-bold"> {fruitName} </h5>
-        <img src={url} alt={`name-${id}`} className="card-img-top px-3" height='150px' width='150px' />
+        <img src={url} alt={`name-${id}`} className="card-img-top px-3 img-fluid" height='150px' width='150px' />
         <div className="card-body">
             <p className="card-text p-0 m-0 px-3">Carbohydrate: {nutrientInfo.carbohydrates}</p>
             <p className="card-text p-0 m-0 px-3">Protien: {nutrientInfo.protien}</p>

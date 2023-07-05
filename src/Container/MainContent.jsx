@@ -55,7 +55,7 @@ function MainContent() {
             <div className='row pt-3 d-flex justify-content-md-center justify-content-lg-center px-1'>
               {
                 apiData.length > 0 && apiData.map(cards => (
-                  <div className='col-sm-12 col-md-3 col-lg-2 d-flex justify-content-center p-0 ms-1 my-3'>
+                  <div className='col-sm-1 col-md-3 col-lg-2 d-flex d-flex mx-md-3 justify-content-md-around justify-content-center p-0 my-3'>
                     <Card fruitName = {cards.fruitName} id = {cards.id} url = {cards.fruitImageUrl} nutrientInfo = {cards.fruitNutrient} />
                   </div>
                 ))
